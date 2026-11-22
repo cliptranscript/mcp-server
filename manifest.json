@@ -1,0 +1,47 @@
+{
+  "manifest_version": "0.3",
+  "name": "clipscript",
+  "display_name": "Clipscript",
+  "version": "1.0.0",
+  "description": "MCP connector for Clipscript: transcripts of YouTube, TikTok, Instagram Reels, Facebook and X videos with TXT, SRT, VTT and JSON exports.",
+  "long_description": "Paste a YouTube, TikTok, Instagram Reels, Facebook or X video link and get the transcript with timestamps. get_transcript transcribes one link and bulk_transcripts up to 10; list_channel_videos lists the latest videos of a YouTube channel, TikTok profile or Instagram profile. list_history, get_saved_transcript and export_transcript reopen saved transcripts as TXT, SRT, VTT or JSON, and get_usage shows your plan allowance. Every transcript is cached by video, and reopening one from your history is free.",
+  "author": {
+    "name": "Codex"
+  },
+  "homepage": "https://cliptranscript.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cliptranscript/mcp-server"
+  },
+  "icon": "icon.png",
+  "server": {
+    "type": "node",
+    "entry_point": "server/index.js",
+    "mcp_config": {
+      "command": "node",
+      "args": [
+        "${__dirname}/server/index.js"
+      ]
+    }
+  },
+  "tools": [
+    {"name": "get_transcript", "description": "Transcript of one video link, with optional timestamps."},
+    {"name": "bulk_transcripts", "description": "Transcripts of up to 10 video links in one call."},
+    {"name": "list_channel_videos", "description": "Latest videos of a YouTube channel, TikTok profile or Instagram profile."},
+    {"name": "list_history", "description": "Your saved transcripts."},
+    {"name": "get_saved_transcript", "description": "Full text of one saved transcript."},
+    {"name": "export_transcript", "description": "Export a saved transcript as TXT, SRT, VTT or JSON."},
+    {"name": "get_usage", "description": "Your plan and how much of the allowance is used."}
+  ],
+  "compatibility": {
+    "platforms": [
+      "darwin",
+      "win32",
+      "linux"
+    ],
+    "runtimes": {
+      "node": ">=22"
+    }
+  },
+  "license": "MIT"
+}
