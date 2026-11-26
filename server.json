@@ -1,0 +1,27 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.cliptranscript/mcp-server",
+  "description": "Video transcript generator: transcribe video to text from YouTube, TikTok, Reels and X links.",
+  "repository": {
+    "url": "https://github.com/cliptranscript/mcp-server",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "clipscript-mcp",
+      "version": "1.0.0",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://cliptranscript.app/mcp"
+    }
+  ],
+  "title": "Video transcripts by Clipscript"
+}
